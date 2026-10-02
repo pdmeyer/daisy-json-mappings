@@ -1,0 +1,59 @@
+{
+  "name": "devkit.desktop",
+  "som": "seed",
+  "parents": {
+    "pot_mux": {
+      "component": "CD4051",
+      "mux_count": 8,
+      "pin": {
+        "adc": 15,
+        "sel0": 0,
+        "sel1": 1,
+        "sel2": 2
+      }
+    }
+  },
+  "components": {
+    "knob1": {
+      "component": "CD4051AnalogControl",
+      "index": 0,
+      "parent": "pot_mux"
+    },
+    "knob2": {
+      "component": "CD4051AnalogControl",
+      "index": 1,
+      "parent": "pot_mux"
+    },
+    "knob3": {
+      "component": "CD4051AnalogControl",
+      "index": 2,
+      "parent": "pot_mux"
+    },
+    "knob4": {
+      "component": "CD4051AnalogControl",
+      "index": 3,
+      "parent": "pot_mux"
+    },
+    "knob5": {
+      "component": "CD4051AnalogControl",
+      "index": 4,
+      "parent": "pot_mux"
+    },
+    "knob6": {
+      "component": "CD4051AnalogControl",
+      "index": 5,
+      "parent": "pot_mux"
+    },
+    "knob7": {
+      "component": "CD4051AnalogControl",
+      "index": 6,
+      "parent": "pot_mux"
+    },
+    "knob8": {
+      "component": "CD4051AnalogControl",
+      "index": 7,
+      "parent": "pot_mux"
+    }
+  }
+}
+
