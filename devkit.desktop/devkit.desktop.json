@@ -26,7 +26,20 @@
         "cs": 9,
         "data": 10
       },
-      "driver": 2
+      "driver_count": 2
+    },
+    "i2c": {
+      "component": "i2c",
+      "pin": {
+        "scl": 11,
+        "sda": 12
+      }
+    },
+    "led_driver": {
+      "component": "PCA9685",
+      "address": "{0x00}",
+      "parent": "i2c",
+      "driver_count": 1
     }
   },
   "components": {
@@ -159,76 +172,84 @@
       "pin": { "a": 28, "b": 27 }
     },
     "led1": {
-      "component": "Led",
-      "pin": 1
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 0
     },
     "led2": {
-      "component": "Led",
-      "pin": 2
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 1
     },
     "led3": {
-      "component": "Led",
-      "pin": 3
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 2
     },
     "led4": {
-      "component": "Led",
-      "pin": 4
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 3
     },
     "led5": {
-      "component": "Led",
-      "pin": 5
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 4
     },
     "led6": {
-      "component": "Led",
-      "pin": 6
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 5
     },
     "led7": {
-      "component": "Led",
-      "pin": 7
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 6
     },
     "led8": {
-      "component": "Led",
-      "pin": 8
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 7
     },
     "led9": {
-      "component": "Led",
-      "pin": 9
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 8
     },
     "led10": {
-      "component": "Led",
-      "pin": 10
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "pin": 9
     },
     "led11": {
-      "component": "Led",
-      "pin": 11
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 10
     },
     "led12": {
-      "component": "Led",
-      "pin": 12
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "pin": 11
     },
     "led13": {
-      "component": "Led",
-      "pin": 13
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 12
     },
     "led14": {
-      "component": "Led",
-      "pin": 14
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 13
     },
     "led15": {
-      "component": "Led",
-      "pin": 15
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 14
     },
     "led16": {
-      "component": "Led",
-      "pin": 16
-    },
-    "led17": {
-      "component": "Led",
-      "pin": 17
-    },
-    "led18": {
-      "component": "Led",
-      "pin": 18
+      "component": "PCA9685Led",
+      "parent": "led_driver",
+      "index": 15
     },
     "gate1": {
       "component": "GateIn",
@@ -239,11 +260,11 @@
       "pin": 18
     },
     "cv1": {
-      "component": "AnalogControl",
+      "component": "AnalogControlBipolar",
       "pin": 20
     },
     "cv2": {
-      "component": "AnalogControl",
+      "component": "AnalogControlBipolar",
       "pin": 21
     },
     "cvout1": {
@@ -253,6 +274,20 @@
     "cvout2": {
       "component": "CVOuts",
       "pin": 23
+    },
+    "detect_l": {
+      "component": "Switch",
+      "pin": 16,
+      "polarity": "daisy::Switch::POLARITY_NORMAL"
+    },
+    "detect_r": {
+      "component": "Switch",
+      "pin": 17,
+      "polarity": "daisy::Switch::POLARITY_NORMAL"
+    },
+    "sd_detect": {
+      "component": "Switch",
+      "pin": 7
     }
   },
   "aliases": {
