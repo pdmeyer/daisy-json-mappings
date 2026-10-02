@@ -33,9 +33,9 @@ for some of these other platforms.
    your target (e.g. `field`), send a `target` message to the `bpatcher` with
    the name of the mapping file you want to use (e.g. `target seed.hothouse.json`)
 
-## Feedback and configurations
+## Testing, feedback, and contributions
 
-If you think something is broken, please file an issue.
+As of 2 October 2026, the devkit files have not been thoroughly tested. If you have one of these devices and test the file, please let us know how it's going by filing an issue. Of course, if you think there is an error, feel free to either file an issue or create a pull request.
 
 If you would like to contribute a new mapping or modify an existing one, please
 make a pull request.
