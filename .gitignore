@@ -1,3 +1,9 @@
+# Repo-specific
+patchers/**/gen_dsp
+patchers/**/*.cpp
+patchers/**/*.h
+patchers/**/*.json
+
 # General
 .DS_Store
 .localized
